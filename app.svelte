@@ -5,16 +5,13 @@
   const decrement = () => counter--;
   const incrementFoo = () => foo++;
   
-  $: quadruple = double * 2;
-  $: double = counter * 2 + bar;
-  
-  $: bar = foo + 5;
+  $: double = counter * 2;
 
 </script>
 
-<button on:click={decrement}>Decrement</button>
-<div>{counter} * 2 = {double}</div>
-<div>{double} * 2 = {quadruple}</div>
+<div>counter = {counter}</div>
+<div>double = {double}</div>
 <div>foo = {foo}</div>
+<button on:click={decrement}>Decrement</button>
 <button on:click={increment}>Increment</button>
 <button on:click={incrementFoo}>Increment Foo</button>
