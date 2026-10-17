@@ -1,14 +1,26 @@
 {
   "name": "build-your-own-svelte",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
   "license": "MIT",
+  "scripts": {
+    "dev": "node src/server.ts",
+    "build": "node src/build.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "packageManager": "pnpm@12.6.0",
   "dependencies": {
-    "acorn": "^8.8.0",
-    "escodegen": "^2.0.0",
-    "estree-walker": "^3.0.1",
-    "periscopic": "^3.0.4",
-    "ws": "^8.14.2"
+    "acorn": "^8.19.0",
+    "escodegen": "^2.1.0",
+    "estree-walker": "^3.0.3",
+    "periscopic": "^4.0.3",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/escodegen": "^0.0.10",
+    "@types/estree": "^1.0.9",
+    "@types/node": "^26.6.5",
+    "@types/ws": "^8.18.2",
+    "typescript": "^7.0.2"
   }
 }
